@@ -1,0 +1,33 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+node_modules/  # Ignores npm/yarn/pnpm packages
+dist/          # Ignores build folders
+dist-ssr/
+*.local
+
+# Editor files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Additional files to ignore
+*.zip          # Ignores all ZIP files
+*.mp4          # Ignores MP4 videos
+*.mov          # Ignores MOV videos
+*.avi          # Ignores AVI videos
+*.mkv          # Ignores MKV videos
+node_modules

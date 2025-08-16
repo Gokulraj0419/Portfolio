@@ -1,0 +1,126 @@
+
+
+/* Navbar */
+.navbar-bg {
+    background-color: #000;
+}
+
+/* Define neon colors */
+.bg-neon-red {
+  background-color: #ff073a;
+}
+.bg-neon-purple {
+  background-color: #9d00ff;
+}
+
+/* Base size + opacity */
+.particle {
+  width: 4px;
+  height: 4px;
+  opacity: 0.3;
+  animation-name: float;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.3;
+  }
+}
+
+
+/* colors with opacity */
+
+.bg-red-blur-circle {
+  width: 24rem;
+  height: 24rem;
+  background-color: rgba(255, 7, 58, 0.1); /* neon-red/10 */
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.bg-purple-blur-circle {
+  width: 24rem;
+  height: 24rem;
+  background-color: rgba(157, 0, 255, 0.1); /* neon-purple/10 */
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.bg-green-blur-circle {
+  width: 24rem;
+  height: 24rem;
+  background-color: rgba(0, 255, 100, 0.05); /* neon-green/5 */
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 4s infinite ease-in-out;
+}
+
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-1s {
+  animation-delay: 1s;
+}
+
+.delay-2s {
+  animation-delay: 2s;
+}
+
+/* Home section */
+
+.text-gradient {
+  background: linear-gradient(to right, #ff0066, #9966ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-btn:hover {
+  background: linear-gradient(to right, #ff0066, #9966ff);
+  box-shadow: 0 0 15px #ff006650, 0 0 20px #9966ff50;
+  color: white;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(90deg, #ff0066, #9966ff);
+  color: white;
+  border: none;
+}
+
+.bg-gradient-glow {
+  background: radial-gradient(circle at center, rgba(255, 0, 255, 0.3), transparent 70%);
+}
+
+
+.blur-3xl {
+  filter: blur(64px);
+}
