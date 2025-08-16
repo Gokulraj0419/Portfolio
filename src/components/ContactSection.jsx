@@ -57,8 +57,8 @@ function ContactSection() {
 
   return (
     <div>
-      <section className="min-vh-100 py-5 d-flex align-items-center">
-        <div className="container mt-3">
+      <section className="min-vh-100 py-5 d-flex align-items-center" style={{ marginTop: "70px" }}>
+        <div className="container">
           <motion.div
             className="text-center mb-5"
             initial={{ opacity: 0, y: 50 }}
