@@ -6,12 +6,21 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 import Cube3D from "./Smallcomponents/Cube3d";
 import ErrorBoundary from "./ErrorBoundary";
 
-function Homesection() {
+function Homesection({ activeSection, setActiveSection }) {
     const socialLinks = [
         { icon: Github, href: "https://github.com/Gokulraj998", label: "GitHub" },
         { icon: Linkedin, href: "https://www.linkedin.com/in/gokul-raj-52a1b22a6/", label: "LinkedIn" },
         // { icon: Twitter, href: "/", label: "Twitter" },
     ];
+
+
+    const handleSectionClick = () => {
+        try {
+            setActiveSection("projects");
+        } catch (error) {
+            console.log("Project Home Error", error);
+        }
+    }
 
     return (
         <section className="min-vh-100 d-flex align-items-center justify-content-center position-relative overflow-hidden bg-dark text-white">
@@ -83,13 +92,16 @@ function Homesection() {
 
                         {/* CTA Button */}
                         <motion.a
-                            href="/"
                             className="btn bg-gradient-primary px-4 py-3 fw-semibold rounded mt-4 home-btn"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 1.4, duration: 0.6 }}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                handleSectionClick();
+                            }}
                         >
                             View My Work
                         </motion.a>

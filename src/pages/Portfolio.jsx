@@ -16,14 +16,14 @@ function Portfolio() {
     const [activeSection, setActiveSection] = useState('home');
 
     const sections = {
-        home: < Homesection />,
+        home: < Homesection activeSection={activeSection} setActiveSection={setActiveSection}/>,
         about: <AboutSection />,
         projects: <ProjectSection />,
         contact: <ContactSection />,
         resume: <ResumeSection />,
         skills: <SkillsSection />,
     };
-    console.log(Object.keys(sections))
+    // console.log(Object.keys(sections))
     const pageVariants = {
         initial: { opacity: 0, x: -100 },
         in: { opacity: 1, x: 0 },
